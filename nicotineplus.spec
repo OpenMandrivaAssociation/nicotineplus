@@ -11,7 +11,7 @@ Summary:        A graphical client for Soulseek
 # - some icons are GPLv3+ and MIT (see files/icons/CREDITS.md)
 License:        GPLv3+ and CC-BY-SA and MIT
 URL:            https://nicotine-plus.github.io/nicotine-plus/
-Source0:        https://github.com/nicotine-plus/nicotine-plus/archive/%{version}/%{altname}-%{version}.tar.gz
+Source0:        https://github.com/nicotine-plus/nicotine-plus/archive/%{version}/%{altname}plus-%{version}.tar.gz
 
 # NOTE: setuptools is NOT required (see
 # https://github.com/Nicotine-Plus/nicotine-plus/commit/74bd408)
