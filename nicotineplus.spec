@@ -3,7 +3,7 @@
 
 Name:           nicotine+
 Version:        2.2.0
-Release:        2%{?dist}
+Release:        1
 Summary:        A graphical client for Soulseek
 
 # - IP2Location Country Database (pynicotine/geoip/ipcountrydb.bin) is CC-BY-SA
@@ -17,14 +17,15 @@ Source0:        https://github.com/nicotine-plus/nicotine-plus/archive/%{version
 # https://github.com/Nicotine-Plus/nicotine-plus/commit/74bd408)
 BuildRequires:  desktop-file-utils
 BuildRequires:  gettext
-BuildRequires:  libappstream-glib
-BuildRequires:  python3-devel
-BuildRequires:  %{py3_dist pytest}
+BuildRequires:  pkgconfig(appstream-glib)
+BuildRequires:  pkgconfig(python)
+BuildRequires:  python3dist(pytest)
+
 Requires:       gdbm
 Requires:       gspell
-Requires:       gtk3
+Requires:       gtk+3.0
 Requires:       libappindicator-gtk3
-Requires:       %{py3_dist pygobject}
+Requires:       python3dist(pygobject)
 BuildArch:      noarch
 
 %description
@@ -42,11 +43,10 @@ rm -rf *.egg-info
 
 
 %build
-%py3_build
-
+%py_build
 
 %install
-%py3_install
+%py_install
 
 # Remove installed documentation/license files. Useful ones are installed using
 # %%doc/%%license
@@ -54,15 +54,6 @@ rm -r $RPM_BUILD_ROOT%{_defaultdocdir}/%{altname}/
 rm $RPM_BUILD_ROOT%{python3_sitelib}/pynicotine/*/README.md
 
 %find_lang %{altname}
-
-
-%check
-# Tests requiring an Internet connection are disabled
-%pytest --deselect=test/unit/test_version.py
-
-desktop-file-validate $RPM_BUILD_ROOT%{_datadir}/applications/%{appdata_id}.desktop
-appstream-util validate-relax --nonet $RPM_BUILD_ROOT%{_metainfodir}/%{appdata_id}.metainfo.xml
-
 
 %files -f %{altname}.lang
 %doc AUTHORS.md NEWS.md README.md TRANSLATORS.md
@@ -74,28 +65,3 @@ appstream-util validate-relax --nonet $RPM_BUILD_ROOT%{_metainfodir}/%{appdata_i
 %{_datadir}/icons/hicolor/*/apps/*.*
 %{_metainfodir}/%{appdata_id}.metainfo.xml
 %{_mandir}/man1/%{altname}.1.*
-
-
-%changelog
-* Sat Dec  5 2020 Mohamed El Morabity <melmorabity@fedoraproject.org> - 2.2.0-2
-- Remove useless dependency on xdg-utils
-
-* Sat Dec  5 2020 Mohamed El Morabity <melmorabity@fedoraproject.org> - 2.2.0-1
-- Update to 2.2.0
-- Update License tag
-
-* Tue Oct 13 2020 Mohamed El Morabity <melmorabity@fedoraproject.org> - 2.1.2-1
-- Update to 2.1.2
-
-* Sun Sep 27 2020 Mohamed El Morabity <melmorabity@fedoraproject.org> - 2.1.1-1
-- Update to 2.1.1
-- Update License tag
-
-* Sat Sep 12 2020 Mohamed El Morabity <melmorabity@fedoraproject.org> - 2.1.0-1
-- Update to 2.1.0
-
-* Tue Jul 28 2020 Fedora Release Engineering <releng@fedoraproject.org> - 2.0.1-2
-- Rebuilt for https://fedoraproject.org/wiki/Fedora_33_Mass_Rebuild
-
-* Mon Jul 20 2020 Mohamed El Morabity <melmorabity@fedoraproject.org> - 2.0.1-1
-- Initial RPM release
