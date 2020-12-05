@@ -22,9 +22,9 @@ BuildRequires:  pkgconfig(python)
 BuildRequires:  python3dist(pytest)
 
 Requires:       gdbm
-Requires:       gspell
+Requires:       %{_lib}gspell1_2
 Requires:       gtk+3.0
-Requires:       libappindicator-gtk3
+Requires:       %{_lib}appindicator3_1
 Requires:       python3dist(pygobject)
 BuildArch:      noarch
 
