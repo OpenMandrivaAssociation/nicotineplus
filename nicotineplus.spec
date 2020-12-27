@@ -60,7 +60,7 @@ rm $RPM_BUILD_ROOT%{python3_sitelib}/pynicotine/*/README.md
 %license COPYING files/icons/CREDITS.md pynicotine/geoip/README.md
 %{_bindir}/%{altname}
 %{python3_sitelib}/pynicotine/
-%{python3_sitelib}/%{altname}-*.egg-info
+#{python3_sitelib}/%{altname}-*.egg-info
 %{_datadir}/applications/%{appdata_id}.desktop
 %{_datadir}/icons/hicolor/*/apps/*.*
 %{_metainfodir}/%{appdata_id}.metainfo.xml
