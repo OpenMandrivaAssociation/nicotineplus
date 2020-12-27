@@ -2,7 +2,7 @@
 %global appdata_id org.nicotine_plus.Nicotine
 
 Name:           nicotine+
-Version:        2.2.0
+Version:        2.2.2
 Release:        1
 Summary:        A graphical client for Soulseek
 
