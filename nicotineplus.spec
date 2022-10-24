@@ -57,11 +57,11 @@ rm -rf *.egg-info
 
 %files -f %{altname}.lang
 %doc AUTHORS.md NEWS.md README.md TRANSLATORS.md
-%license COPYING files/icons/CREDITS.md pynicotine/geoip/README.md
+%license COPYING pynicotine/geoip/README.md
 %{_bindir}/%{altname}
 %{python_sitelib}/pynicotine/
 %{python_sitelib}/nicotine_plus-%{version}-py*.*.egg-info
 %{_datadir}/applications/%{appdata_id}.desktop
 %{_datadir}/icons/hicolor/*/apps/*.*
-%{_metainfodir}/%{appdata_id}.metainfo.xml
+#{_metainfodir}/%{appdata_id}.metainfo.xml
 %{_mandir}/man1/%{altname}.1.*
