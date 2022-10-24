@@ -2,7 +2,7 @@
 %global appdata_id org.nicotine_plus.Nicotine
 
 Name:           nicotine+
-Version:        2.2.2
+Version:        3.2.6
 Release:        1
 Summary:        A graphical client for Soulseek
 
@@ -50,18 +50,19 @@ rm -rf *.egg-info
 
 # Remove installed documentation/license files. Useful ones are installed using
 # %%doc/%%license
-rm -r $RPM_BUILD_ROOT%{_defaultdocdir}/%{altname}/
-rm $RPM_BUILD_ROOT%{python3_sitelib}/pynicotine/*/README.md
+#rm -r $RPM_BUILD_ROOT%{_defaultdocdir}/%{altname}/
+#rm $RPM_BUILD_ROOT%{python3_sitelib}/pynicotine/*/README.md
 
 %find_lang %{altname}
 
 %files -f %{altname}.lang
 %doc AUTHORS.md NEWS.md README.md TRANSLATORS.md
-%license COPYING files/icons/CREDITS.md pynicotine/geoip/README.md
+%license COPYING pynicotine/geoip/README.md
 %{_bindir}/%{altname}
 %{python_sitelib}/pynicotine/
 %{python_sitelib}/nicotine_plus-%{version}-py*.*.egg-info
 %{_datadir}/applications/%{appdata_id}.desktop
 %{_datadir}/icons/hicolor/*/apps/*.*
-%{_metainfodir}/%{appdata_id}.metainfo.xml
+%{_iconsdir}/hicolor/scalable/
+%{_metainfodir}/org.nicotine_plus.Nicotine.appdata.xml
 %{_mandir}/man1/%{altname}.1.*
