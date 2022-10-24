@@ -50,8 +50,8 @@ rm -rf *.egg-info
 
 # Remove installed documentation/license files. Useful ones are installed using
 # %%doc/%%license
-rm -r $RPM_BUILD_ROOT%{_defaultdocdir}/%{altname}/
-rm $RPM_BUILD_ROOT%{python3_sitelib}/pynicotine/*/README.md
+#rm -r $RPM_BUILD_ROOT%{_defaultdocdir}/%{altname}/
+#rm $RPM_BUILD_ROOT%{python3_sitelib}/pynicotine/*/README.md
 
 %find_lang %{altname}
 
