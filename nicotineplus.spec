@@ -63,5 +63,6 @@ rm -rf *.egg-info
 %{python_sitelib}/nicotine_plus-%{version}-py*.*.egg-info
 %{_datadir}/applications/%{appdata_id}.desktop
 %{_datadir}/icons/hicolor/*/apps/*.*
-#{_metainfodir}/%{appdata_id}.metainfo.xml
+%{_iconsdir}/hicolor/scalable/
+%{_metainfodir}/org.nicotine_plus.Nicotine.appdata.xml
 %{_mandir}/man1/%{altname}.1.*
