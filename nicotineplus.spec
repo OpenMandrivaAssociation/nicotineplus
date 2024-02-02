@@ -2,7 +2,7 @@
 %global appdata_id org.nicotine_plus.Nicotine
 
 Name:           nicotine+
-Version:        3.2.9
+Version:        3.3.0
 Release:        1
 Summary:        A graphical client for Soulseek
 
@@ -18,12 +18,13 @@ Source0:        https://github.com/nicotine-plus/nicotine-plus/archive/%{version
 BuildRequires:  desktop-file-utils
 BuildRequires:  gettext
 BuildRequires:  pkgconfig(appstream-glib)
+BuildRequires:  pkgconfig(gtk4)
 BuildRequires:  pkgconfig(python)
 BuildRequires:  python3dist(pytest)
 
 Requires:       gdbm
 Requires:       %{_lib}gspell1_2
-Requires:       gtk+3.0
+Requires:       gtk4
 Requires:       %{_lib}appindicator3_1
 Requires:       python3dist(pygobject)
 BuildArch:      noarch
