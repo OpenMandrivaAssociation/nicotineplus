@@ -60,7 +60,7 @@ rm -rf *.egg-info
 %doc AUTHORS.md NEWS.md TRANSLATORS.md
 %license COPYING
 %{_bindir}/%{altname}
-%{python_sitelib}/pynicotine/
+#{python_sitelib}/pynicotine/
 %{python_sitelib}/nicotine_plus-%{version}-py*.*.egg-info
 %{_datadir}/applications/%{appdata_id}.desktop
 %{_iconsdir}/hicolor/*
