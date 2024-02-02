@@ -57,7 +57,7 @@ rm -rf *.egg-info
 %find_lang %{altname}
 
 %files -f %{altname}.lang
-%doc AUTHORS.md NEWS.md README.md TRANSLATORS.md
+%doc AUTHORS.md NEWS.md TRANSLATORS.md
 %license COPYING pynicotine/geoip/README.md
 %{_bindir}/%{altname}
 %{python_sitelib}/pynicotine/
