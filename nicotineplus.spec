@@ -65,7 +65,7 @@ rm -rf *.egg-info
 %{python_sitelib}/pynicotine/chatrooms.py
 %{python_sitelib}/pynicotine/cli.py
 %{python_sitelib}/pynicotine/config.py
-%{python_sitelib}/ppynicotine/core.py
+%{python_sitelib}/pynicotine/core.py
 %{python_sitelib}/pynicotine/downloads.py
 %{python_sitelib}/pynicotine/events.py
 %{python_sitelib}/pynicotine/external/
