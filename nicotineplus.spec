@@ -68,11 +68,11 @@ rm -rf *.egg-info
 %{python_sitelib}/ppynicotine/core.py
 %{python_sitelib}/pynicotine/downloads.py
 %{python_sitelib}/pynicotine/events.py
-%{python_sitelib}/external/
-%{python_sitelib}/gtkgui/
-%{python_sitelib}/headless/
-%{python_sitelib}/i18n.py
-%{python_sitelib}/interests.py
+%{python_sitelib}/pynicotine/external/
+%{python_sitelib}/pynicotine/gtkgui/
+%{python_sitelib}/pynicotine/headless/
+%{python_sitelib}/pynicotine/i18n.py
+%{python_sitelib}/pynicotine/interests.py
 %{python_sitelib}/pynicotine/logfacility.py
 %{python_sitelib}/pynicotine/networkfilter.py
 %{python_sitelib}/pynicotine/notifications.py
