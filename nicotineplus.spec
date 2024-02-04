@@ -60,6 +60,7 @@ rm -rf *.egg-info
 %doc AUTHORS.md NEWS.md TRANSLATORS.md
 %license COPYING
 %{_bindir}/%{altname}
+%{python_sitelib}/pynicotine/__init__.py
 %{python_sitelib}/pynicotine/__main__.py
 %{python_sitelib}/pynicotine/buddies.py
 %{python_sitelib}/pynicotine/chatrooms.py
