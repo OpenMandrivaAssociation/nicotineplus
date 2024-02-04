@@ -2,7 +2,7 @@
 %global appdata_id org.nicotine_plus.Nicotine
 
 Name:           nicotine+
-Version:        3.2.9
+Version:        3.3.0
 Release:        1
 Summary:        A graphical client for Soulseek
 
@@ -18,12 +18,13 @@ Source0:        https://github.com/nicotine-plus/nicotine-plus/archive/%{version
 BuildRequires:  desktop-file-utils
 BuildRequires:  gettext
 BuildRequires:  pkgconfig(appstream-glib)
+BuildRequires:  pkgconfig(gtk4)
 BuildRequires:  pkgconfig(python)
 BuildRequires:  python3dist(pytest)
 
 Requires:       gdbm
 Requires:       %{_lib}gspell1_2
-Requires:       gtk+3.0
+Requires:       gtk4
 Requires:       %{_lib}appindicator3_1
 Requires:       python3dist(pygobject)
 BuildArch:      noarch
@@ -56,10 +57,41 @@ rm -rf *.egg-info
 %find_lang %{altname}
 
 %files -f %{altname}.lang
-%doc AUTHORS.md NEWS.md README.md TRANSLATORS.md
-%license COPYING pynicotine/geoip/README.md
+%doc AUTHORS.md NEWS.md TRANSLATORS.md
+%license COPYING
 %{_bindir}/%{altname}
-%{python_sitelib}/pynicotine/
+%{python_sitelib}/pynicotine/__init__.py
+%{python_sitelib}/pynicotine/__main__.py
+%{python_sitelib}/pynicotine/buddies.py
+%{python_sitelib}/pynicotine/chatrooms.py
+%{python_sitelib}/pynicotine/cli.py
+%{python_sitelib}/pynicotine/config.py
+%{python_sitelib}/pynicotine/core.py
+%{python_sitelib}/pynicotine/downloads.py
+%{python_sitelib}/pynicotine/events.py
+%{python_sitelib}/pynicotine/external/
+%{python_sitelib}/pynicotine/gtkgui/
+%{python_sitelib}/pynicotine/headless/
+%{python_sitelib}/pynicotine/i18n.py
+%{python_sitelib}/pynicotine/interests.py
+%{python_sitelib}/pynicotine/logfacility.py
+%{python_sitelib}/pynicotine/networkfilter.py
+%{python_sitelib}/pynicotine/notifications.py
+%{python_sitelib}/pynicotine/nowplaying.py
+%{python_sitelib}/pynicotine/plugins/
+%{python_sitelib}/pynicotine/pluginsystem.py
+%{python_sitelib}/pynicotine/portmapper.py
+%{python_sitelib}/pynicotine/privatechat.py
+%{python_sitelib}/pynicotine/search.py
+%{python_sitelib}/pynicotine/shares.py
+%{python_sitelib}/pynicotine/slskmessages.py
+%{python_sitelib}/pynicotine/slskproto.py
+%{python_sitelib}/pynicotine/transfers.py
+%{python_sitelib}/pynicotine/uploads.py
+%{python_sitelib}/pynicotine/userbrowse.py
+%{python_sitelib}/pynicotine/userinfo.py
+%{python_sitelib}/pynicotine/users.py
+%{python_sitelib}/pynicotine/utils.py
 %{python_sitelib}/nicotine_plus-%{version}-py*.*.egg-info
 %{_datadir}/applications/%{appdata_id}.desktop
 %{_iconsdir}/hicolor/*
