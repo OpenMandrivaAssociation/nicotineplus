@@ -1,3 +1,5 @@
+%define _empty_manifest_terminate_build 0
+
 %global altname nicotine
 %global appdata_id org.nicotine_plus.Nicotine
 
