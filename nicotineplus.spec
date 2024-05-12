@@ -92,7 +92,7 @@ rm -rf *.egg-info
 %{python_sitelib}/pynicotine/userinfo.py
 %{python_sitelib}/pynicotine/users.py
 %{python_sitelib}/pynicotine/utils.py
-%{python_sitelib}/nicotine_plus-%{version}-py*.*.egg-info
+#{python_sitelib}/nicotine_plus-%{version}-py*.*.egg-info
 %{_datadir}/applications/%{appdata_id}.desktop
 %{_iconsdir}/hicolor/*
 %{_metainfodir}/org.nicotine_plus.Nicotine.appdata.xml
