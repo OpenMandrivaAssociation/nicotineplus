@@ -56,9 +56,10 @@ rm -rf *.egg-info
 #rm -r $RPM_BUILD_ROOT%{_defaultdocdir}/%{altname}/
 #rm $RPM_BUILD_ROOT%{python3_sitelib}/pynicotine/*/README.md
 
-%find_lang %{altname}
+#find_lang %{altname}
 
-%files -f %{altname}.lang
+%files 
+#-f %{altname}.lang
 %doc AUTHORS.md NEWS.md TRANSLATORS.md
 %license COPYING
 %{_bindir}/%{altname}
