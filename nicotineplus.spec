@@ -5,7 +5,7 @@
 
 Name:           nicotine+
 Version:        3.3.4
-Release:        1
+Release:        2
 Summary:        A graphical client for Soulseek
 
 # - IP2Location Country Database (pynicotine/geoip/ipcountrydb.bin) is CC-BY-SA
