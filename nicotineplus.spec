@@ -25,7 +25,7 @@ BuildRequires:  pkgconfig(python)
 BuildRequires:  python3dist(pytest)
 
 Requires:       gdbm
-Requires:       %{_lib}gspell1_2
+Requires:       %{_lib}gspell1_3
 Requires:       gtk4
 Requires:       %{_lib}appindicator3_1
 Requires:       python3dist(pygobject)
