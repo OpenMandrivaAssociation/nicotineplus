@@ -31,7 +31,6 @@ BuildRequires:  python%{pyver}dist(pytest)
 Requires:       gdbm
 Requires:       %{_lib}gspell1_3
 Requires:       gtk4
-Requires:       %{_lib}appindicator3_1
 Requires:       python%{pyver}dist(pygobject)
 BuildArch:      noarch
 
