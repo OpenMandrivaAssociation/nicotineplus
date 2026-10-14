@@ -7,6 +7,7 @@ Name:           nicotine+
 Version:        3.3.10
 Release:        3
 Summary:        A graphical client for Soulseek
+Group:          Applications/Internet
 
 # - IP2Location Country Database (pynicotine/geoip/ipcountrydb.bin) is CC-BY-SA
 #   (see pynicotine/geoip/README.md)
@@ -15,8 +16,11 @@ License:        GPLv3+ and CC-BY-SA and MIT
 URL:            https://nicotine-plus.github.io/nicotine-plus/
 Source0:        https://github.com/nicotine-plus/nicotine-plus/archive/%{version}/%{altname}-plus-%{version}.tar.gz
 
-# NOTE: setuptools is NOT required (see
-# https://github.com/Nicotine-Plus/nicotine-plus/commit/74bd408)
+# pyproject build-backend is setuptools. The generated build runs pip wheel
+# without build isolation, so pip, wheel, and setuptools have to be present.
+BuildRequires:  python%{pyver}dist(pip)
+BuildRequires:  python%{pyver}dist(setuptools)
+BuildRequires:  python%{pyver}dist(wheel)
 BuildRequires:  desktop-file-utils
 BuildRequires:  gettext
 BuildRequires:  pkgconfig(appstream-glib)
