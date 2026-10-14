@@ -5,7 +5,7 @@
 
 Name:           nicotine+
 Version:        3.3.10
-Release:        2
+Release:        3
 Summary:        A graphical client for Soulseek
 
 # - IP2Location Country Database (pynicotine/geoip/ipcountrydb.bin) is CC-BY-SA
@@ -21,14 +21,14 @@ BuildRequires:  desktop-file-utils
 BuildRequires:  gettext
 BuildRequires:  pkgconfig(appstream-glib)
 BuildRequires:  pkgconfig(gtk4)
-BuildRequires:  pkgconfig(python)
-BuildRequires:  python3dist(pytest)
+BuildRequires:  pkgconfig(python3)
+BuildRequires:  python%{pyver}dist(pytest)
 
 Requires:       gdbm
 Requires:       %{_lib}gspell1_3
 Requires:       gtk4
 Requires:       %{_lib}appindicator3_1
-Requires:       python3dist(pygobject)
+Requires:       python%{pyver}dist(pygobject)
 BuildArch:      noarch
 
 %description
